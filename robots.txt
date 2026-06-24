@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abdulmuqeem956.github.io/Royal-Growth-Agency/sitemap.xml
