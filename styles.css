@@ -905,52 +905,45 @@ a {
   }
 }
 
-/* Animated Stock Loop Background Effect */
+/* Full-Screen Candlestick Stock Background Layer */
+.hero {
+  position: relative;
+  z-index: 1; /* Establishes a clean layering context for the homepage */
+}
+
 .stock-rise-container {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none;
-  z-index: 1;             /* Lower layer than text content */
-  opacity: 0.20;          /* Subtle enough to not distract from reading text */
+  pointer-events: none; /* Makes it completely invisible to mouse clicks */
+  z-index: -1;          /* FORCES IT UNDER TEXT, BUTTONS, AND ORBS */
+  opacity: 0.15;         /* Elegant dimming so text is fully readable */
+  overflow: hidden;
+}
+
+/* Candlestick loop animations */
+.candle {
+  transform-origin: bottom;
+  animation: candleGrow 8s ease-in-out infinite alternate;
 }
 
 .stock-line-path {
-  stroke-dasharray: 1200;
-  stroke-dashoffset: 1200;
-  animation: stockLoop 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+  animation: lineDraw 12s linear infinite;
 }
 
-.stock-glow-path {
-  opacity: 0;
-  animation: fillFadeLoop 6s ease-in-out infinite;
+@keyframes candleGrow {
+  0%, 100% { transform: scaleY(0.85); opacity: 0.4; }
+  50% { transform: scaleY(1.15); opacity: 0.9; }
 }
 
-@keyframes stockLoop {
-  0% {
-    stroke-dashoffset: 1200;
-  }
-  40%, 75% {
-    stroke-dashoffset: 0;
-  }
-  95%, 100% {
-    stroke-dashoffset: -1200;
-  }
+@keyframes lineDraw {
+  0% { stroke-dashoffset: 1500; }
+  50% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -1500; }
 }
-
-@keyframes fillFadeLoop {
-  0%, 15% {
-    opacity: 0;
-  }
-  40%, 70% {
-    opacity: 0.12;
-  }
-  90%, 100% {
-    opacity: 0;
-  }
-}
-    opacity: 0;
   }
 }
