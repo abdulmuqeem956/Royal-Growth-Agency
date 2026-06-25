@@ -336,11 +336,11 @@ function Hero() {
           <span style={{ fontSize: 12, color: "#A855F7", fontWeight: 600, letterSpacing: "0.1em", fontFamily: "Inter, sans-serif" }}>DIGITAL CONTENT AGENCY · INDIA</span>
         </div>
 
-        {/* H1 */}
+       {/* H1 */}
         <h1 style={{ fontFamily: "Space Grotesk, sans-serif", fontWeight: 800, fontSize: "clamp(2.4rem,7vw,5.5rem)", lineHeight: 1.08, letterSpacing: "-0.03em", maxWidth: 900, margin: "0 auto 20px", color: "#fff" }}>
-          Your Videos.{" "}
-          <span style={S.gradientText}>Our Creativity.</span>
-          {" "}More Attention.
+          Your Business.{" "}
+          <span style={S.gradientText}>Our Strategy.</span>
+          {" "}More Revenue.
         </h1>
 
         {/* Subtext */}
@@ -561,7 +561,7 @@ function FinalCTA() {
         <p style={{ fontSize: 18, color: "rgba(255,255,255,0.45)", marginBottom: 48, lineHeight: 1.7 }}>
           Mee next best video{" "}<em style={{ color: "rgba(168,85,247,0.8)" }}>ikkadi nundi</em>{" "}start avvachu.
         </p>
-        <Btn href="mailto:hello@framestudio.in" variant="fill">Let's Work →</Btn>
+       <Btn href="mailto:royalgrowthagency04@gmail.com" variant="fill">Let's Work →</Btn>
       </div>
     </section>
   );
