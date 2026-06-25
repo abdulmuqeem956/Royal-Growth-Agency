@@ -334,7 +334,7 @@ a {
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 1s 0.1s cubic-bezier(0.23, 1, 0.32, 1),
@@ -913,8 +913,8 @@ a {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 0;             /* Pushes it behind text or links */
-  opacity: 0.25;          /* Keeps it elegant and subtle */
+  z-index: 1;             /* Lower layer than text content */
+  opacity: 0.20;          /* Subtle enough to not distract from reading text */
 }
 
 .stock-line-path {
@@ -948,6 +948,9 @@ a {
     opacity: 0.12;
   }
   90%, 100% {
+    opacity: 0;
+  }
+}
     opacity: 0;
   }
 }
